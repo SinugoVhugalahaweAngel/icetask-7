@@ -21,10 +21,15 @@ public class BookingEvent {
 
          // Create an instance of the Login class to handle registration and login
         Booking login = new Booking();
+       
 // Start the make reservations process
         System.out.println("Make reservations.");
         System.out.println("Enter a bookingcode (max 12 characters, must include an underscore): ");
         String code = sc.nextLine();   // Read username from user input
 
+         if (!login.checkbookingcode(code)) {
+            System.out.println("Invalid bookingcode format. bookingcode must be max 12 characters and contain an underscore.");
+            return;  // Exit if the username format is invalid
+        }
     }
 }
