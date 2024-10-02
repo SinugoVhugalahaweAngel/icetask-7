@@ -15,21 +15,21 @@ public class BookingEvent {
         // Create a Scanner object to read user input
         Scanner sc = new Scanner(System.in);
 
-        // Prompt the user to enter their first name
+        
         System.out.println("Enter your booking code: ");
-        String bookingcode = sc.nextLine();  // Read first name from user input
+        String bookingcode = sc.nextLine();  
 
          // Create an instance of the Login class to handle registration and login
-        Booking login = new Booking();
+        booking login = new booking();
        
 // Start the make reservations process
         System.out.println("Make reservations.");
         System.out.println("Enter a bookingcode (max 12 characters, must include an underscore): ");
-        String code = sc.nextLine();   // Read username from user input
+        String code = sc.nextLine();   
 
          if (!login.checkbookingcode(code)) {
             System.out.println("Invalid bookingcode format. bookingcode must be max 12 characters and contain an underscore.");
-            return;  // Exit if the username format is invalid
+            return; 
         }
          
          // Prompt the user to enter a password that meets complexity requirements

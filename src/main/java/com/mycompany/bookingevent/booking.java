@@ -15,7 +15,7 @@ public class booking {
     
     // This Method ensures that any bookingcode contains an under score(_) and length is no more than 12
     public boolean checkbookingcode(String code) {
-        // Ensure the username contains an underscore and is no more than 12 characters
+        // Ensure the bookingcode contains an underscore and is no more than 12 characters
         return code.length() <= 12 && code.contains("_");
     }
     // This method ensures that password meet the following password complexity rules ,the password must be:Atleast 8 characters long ,Contains capital letter,Contains a number,Contains special character 
@@ -48,7 +48,7 @@ public class booking {
     } else if (!checkPasswordComplexity(password)) {
         return "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and a special character.";
     } else {
-        this.bookingCode = bookingCode;  // Ensure consistent variable names
+        this.bookingCode = bookingCode;  
         this.password = password;
         return "Reservation successfully made.";
     }
