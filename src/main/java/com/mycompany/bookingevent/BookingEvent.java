@@ -36,6 +36,15 @@ public class BookingEvent {
         System.out.println("Enter a password (must include a capital letter, number, and special character): ");
         String password = sc.nextLine();   // Read password from user input
         
+        // Define booking code and password
+        String bookingCode = "Enter_123";
+      
+
+        // Register the user using the provided booking code and password
+        String makeReservationMessage = login.makeReservation(bookingCode, password);
+
+        // Output the result of the reservation process
+        System.out.println(makeReservationMessage);
 
     }
 }
