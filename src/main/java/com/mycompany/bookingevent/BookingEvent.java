@@ -31,5 +31,11 @@ public class BookingEvent {
             System.out.println("Invalid bookingcode format. bookingcode must be max 12 characters and contain an underscore.");
             return;  // Exit if the username format is invalid
         }
+         
+         // Prompt the user to enter a password that meets complexity requirements
+        System.out.println("Enter a password (must include a capital letter, number, and special character): ");
+        String password = sc.nextLine();   // Read password from user input
+        
+
     }
 }
