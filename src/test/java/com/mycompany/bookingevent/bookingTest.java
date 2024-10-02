@@ -47,8 +47,9 @@ public class bookingTest {
         boolean expResult = true;
         boolean result = instance.checkbookingcode(code);
         assertEquals(expResult, result);
+        System.out.println("Result for '" + code + "': " + result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
