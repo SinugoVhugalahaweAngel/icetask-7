@@ -42,6 +42,17 @@ public class booking {
         return password.length() >= 8 && hasCapital && hasSpecialcharacter && hasDigit;
     
     }
+     public String makeReservation(String bookingCode, String password) {
+    if (!checkbookingcode(bookingCode)) {
+        return "Booking code is incorrectly formatted";
+    } else if (!checkPasswordComplexity(password)) {
+        return "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and a special character.";
+    } else {
+        this.bookingCode = bookingCode;  // Ensure consistent variable names
+        this.password = password;
+        return "Reservation successfully made.";
+    }
+}
 
     
 }
