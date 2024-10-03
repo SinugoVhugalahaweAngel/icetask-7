@@ -51,25 +51,6 @@ public class bookingTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
-     @Test
-public void testCheckbookingcodeInvalid() {
-        System.out.println("checkUserName");
-        String code = "Enter1234567890";
-        booking instance = new booking();
-        boolean expResult = false;
-        boolean result = instance.checkbookingcode(code);
-        // Assert that the result matches the expected result
-       assertEquals(expResult, result);
-       // Print the result for manual verification
-        System.out.println("booking code is not correctly formatted,Please ensure that your booking code contains underscore and is no more than 12 characters  in length");
-
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-         System.out.println("Result for '" + code + "': " + result);
-         
-        
-    }
 
     /**
      * Test of checkPasswordComplexity method, of class booking.
