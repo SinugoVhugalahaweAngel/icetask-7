@@ -104,17 +104,15 @@ public void testCheckbookingcodeInvalid() {
     /**
      * Test of makeReservation method, of class booking.
      */
-    @Test
-    public void testMakeReservation() {
-        System.out.println("makeReservation");
-        String bookingCode = "";
-        String password = "";
+    
+ @Test
+    public void testMakeReservation_Success() {
+        System.out.println("makeReservation - Success Case");
+        String bookingCode = "Enter_123";
+        String password = "Password@1";
         booking instance = new booking();
-        String expResult = "";
+        String expResult = "Reservation successfully made.";
         String result = instance.makeReservation(bookingCode, password);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
 }
