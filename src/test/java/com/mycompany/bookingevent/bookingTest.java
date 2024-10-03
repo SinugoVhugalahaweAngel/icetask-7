@@ -4,10 +4,8 @@
  */
 package com.mycompany.bookingevent;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+
+        
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -106,6 +104,16 @@ public void testCheckbookingcodeInvalid() {
         String password = "Password@1";
         booking instance = new booking();
         String expResult = "Booking code is incorrectly formatted";
+        String result = instance.makeReservation(bookingCode, password);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testMakeReservation_InvalidPassword() {
+        System.out.println("makeReservation - Invalid Password");
+        String bookingCode = "Enter_123";
+        String password = "Password1234567890";
+        booking instance = new booking();
+        String expResult = "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number, and a special character.";
         String result = instance.makeReservation(bookingCode, password);
         assertEquals(expResult, result);
     }
