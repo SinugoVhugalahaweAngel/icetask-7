@@ -75,13 +75,14 @@ public void testCheckbookingcodeInvalid() {
     @Test
     public void testCheckPasswordComplexity() {
         System.out.println("checkPasswordComplexity");
-        String password = "";
+        String password = "Password@1";
         booking instance = new booking();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.checkPasswordComplexity(password);
         assertEquals(expResult, result);
+         System.out.println("Password successfully captured");
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
