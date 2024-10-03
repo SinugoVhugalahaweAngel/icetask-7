@@ -17,24 +17,8 @@ import static org.junit.Assert.*;
  */
 public class bookingTest {
     
-    public bookingTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+   
+
 
     /**
      * Test of checkbookingcode method, of class booking.
@@ -112,6 +96,16 @@ public void testCheckbookingcodeInvalid() {
         String password = "Password@1";
         booking instance = new booking();
         String expResult = "Reservation successfully made.";
+        String result = instance.makeReservation(bookingCode, password);
+        assertEquals(expResult, result);
+    }
+    @Test
+    public void testMakeReservation_InvalidBookingCode() {
+        System.out.println("makeReservation - Invalid Booking Code");
+        String bookingCode = "Enter1234567890";
+        String password = "Password@1";
+        booking instance = new booking();
+        String expResult = "Booking code is incorrectly formatted";
         String result = instance.makeReservation(bookingCode, password);
         assertEquals(expResult, result);
     }
